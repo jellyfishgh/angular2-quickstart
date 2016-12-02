@@ -9,22 +9,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var platform_browser_1 = require("@angular/platform-browser");
-var app_component_1 = require("./app.component");
-var voter_component_1 = require("./voter.component");
-var votes_component_1 = require("./votes.component");
-var AppModule = (function () {
-    function AppModule() {
+var VotesComponent = (function () {
+    function VotesComponent() {
+        this.agreed = 0;
+        this.disagreed = 0;
+        this.voters = ["Mr IQ", "Ms. Universe", "Bombasto"];
     }
-    AppModule = __decorate([
-        core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule],
-            declarations: [app_component_1.AppComponent, votes_component_1.VotesComponent, voter_component_1.VoterComponent],
-            bootstrap: [app_component_1.AppComponent]
+    VotesComponent.prototype.onVoted = function (agreed) {
+        agreed ? this.agreed++ : this.disagreed++;
+    };
+    VotesComponent = __decorate([
+        core_1.Component({
+            moduleId: module.id,
+            selector: "vote-taker",
+            templateUrl: "votes.component.html"
         }), 
         __metadata('design:paramtypes', [])
-    ], AppModule);
-    return AppModule;
+    ], VotesComponent);
+    return VotesComponent;
 }());
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+exports.VotesComponent = VotesComponent;
+//# sourceMappingURL=votes.component.js.map

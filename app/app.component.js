@@ -8,14 +8,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
+var core_1 = require("@angular/core");
 var AppComponent = (function () {
     function AppComponent() {
     }
     AppComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            template: "\n    <h1>My First Angular2 App</h1>\n    <h2>Hello World</h2>\n    "
+            selector: "my-app",
+            template: "\n    <h1>My First Angular2 App powered by typescript</h1>\n    <h2>Hello World</h2>\n    <vote-taker></vote-taker>\n    "
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
