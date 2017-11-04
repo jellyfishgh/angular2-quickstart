@@ -45,9 +45,3 @@ jspm_packages
 # Compressed files
 *.zip
 *.rar
-
-# OS X DS_Store files
-.DS_Store
-
-#eslint
-.eslintrc.js
